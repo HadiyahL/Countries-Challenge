@@ -28,6 +28,11 @@
   color: #61dafb;
 }
 
+.flagImage {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
