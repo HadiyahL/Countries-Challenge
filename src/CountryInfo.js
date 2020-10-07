@@ -5,9 +5,9 @@ const CountryInfo = ({ name, population, region, capital }) => {
   return (
     <ul>
       <li>{name}</li>
-      <li>Region: {region}</li>
-      <li>Population: {population} </li>
-      <li>Capital: {capital}</li>
+      <li><b>Region</b>: {region}</li>
+      <li><b>Population</b>: {population} </li>
+      <li><b>Capital</b>: {capital}</li>
     </ul>
   );
 };

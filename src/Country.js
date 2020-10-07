@@ -3,9 +3,8 @@ import Flag from "./Flag";
 import CountryInfo from "./CountryInfo";
 
 const Country = ({ details }) => {
-    console.log(details);
   return (
-    <div>
+    <div className="country">
       <Flag flag={details.flag} />
       <CountryInfo
         name={details.name}
