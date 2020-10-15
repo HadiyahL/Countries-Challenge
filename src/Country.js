@@ -2,15 +2,20 @@ import React from "react";
 import Flag from "./Flag";
 import CountryInfo from "./CountryInfo";
 
-const Country = ({ details }) => {
+const Country = ({ country, setIsHomePage, setCountryName }) => {
+  const handleClick = (event) => {
+    setIsHomePage(false)
+    setCountryName(country.name)
+  };
+
   return (
-    <div className="country">
-      <Flag flag={details.flag} />
+    <div className="country" onClick={handleClick}>
+      <Flag flag={country.flag} />
       <CountryInfo
-        name={details.name}
-        region={details.region}
-        population={details.population}
-        capital={details.capital}
+        name={country.name}
+        region={country.region}
+        population={country.population}
+        capital={country.capital}
       />
     </div>
   );

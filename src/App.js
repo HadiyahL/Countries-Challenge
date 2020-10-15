@@ -1,30 +1,54 @@
 import React, { useState } from "react";
 import countriesAll from "./countriesAll.json";
-import Country from "./Country";
-import FilterByRegion from "./FilterByRegion";
-import "./App.css";
 import SearchBar from "./SearchBar";
+import FilterByRegion from "./FilterByRegion";
+import Country from "./Country";
+import "./App.css";
+
+import CountryDetailPage from "./CountryDetailPage";
 
 function App() {
   const [countries] = useState(countriesAll);
   const [countriesDisplay, setCountriesDisplay] = useState(countriesAll);
- 
+  const [countryName, setCountryName] = useState("");
+  const [isHomePage, setIsHomePage] = useState(true);
+
   return (
     <div className="App">
-      <SearchBar countries={countries} setCountriesDisplay={setCountriesDisplay}/>
-      <FilterByRegion
-        countries={countries}
-        setCountriesDisplay={setCountriesDisplay}
-      />
-      <div className="countries-container">
-        {countriesDisplay.map((country) => {
-          return <Country key={country.name} details={country} />;
-        })}
-        {/* {filteredCountries.length === 0 && (
-          <h3>No such country found, please enter a correct country name</h3>
-        )} */}
-        ;
-      </div>
+      {isHomePage ? (
+        <>
+          <div className="searchFilter">
+            <SearchBar
+              countries={countries}
+              setCountriesDisplay={setCountriesDisplay}
+            />
+            <FilterByRegion
+              countries={countries}
+              setCountriesDisplay={setCountriesDisplay}
+            />
+          </div>
+
+          <div className="countries-container">
+            {countriesDisplay.map((country) => {
+              return (
+                <Country
+                  key={country.name}
+                  country={country}
+                  setIsHomePage={setIsHomePage}
+                  setCountryName={setCountryName}
+                />
+              );
+            })}
+          </div>
+        </>
+      ) : (
+        <CountryDetailPage
+          countries={countries}
+          countryName={countryName}
+          setIsHomePage={setIsHomePage}
+          setCountryName={setCountryName}
+        />
+      )}
     </div>
   );
 }
