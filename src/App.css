@@ -110,6 +110,7 @@ body {
 .infoPage {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
 }
 .infoPage .flagImage {
   width: 450px;
