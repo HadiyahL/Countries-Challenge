@@ -1,15 +1,18 @@
 .darkMode {
   --text-color: white;
   --bg-color: hsl(207, 26%, 17%);
+  --box-shade: 0 0 10px rgba(124, 123, 120, 0.603);
 }
 .lightMode {
   --text-color: black;
   --bg-color: hsl(0, 0%, 98%);
+  --box-shade: 0 0 10px rgba(124, 123, 120, 0.603);
 }
 
 body {
   /* background-color: rgb(248, 247, 246); */
   background-color: var(--bg-color);
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .container {
@@ -26,7 +29,7 @@ body {
 .header {
   padding: 2rem 5rem;
   font-size: 1rem;
-  box-shadow: 0 0 10px rgba(124, 123, 120, 0.603);
+  box-shadow: var(--box-shade);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53,9 +56,24 @@ body {
   width: 30%;
   font-size: 1rem;
   border: none;
-  box-shadow: 0 0 10px rgba(124, 123, 120, 0.603);
+  box-shadow: var(--box-shade);
   background-color: var(--bg-color);
   color: var(--text-color);
+}
+.iconBtn {
+}
+.icon {
+  margin-right: 0.5rem;
+  vertical-align: -5px;
+}
+.backBtn {
+  font-size: 1rem;
+  padding: 0.25rem 1.25rem;
+  border: none;
+  box-shadow: var(--box-shade);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin-bottom: 5rem;
 }
 .countries-container {
   display: flex;
@@ -68,7 +86,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 300px;
-  box-shadow: 0 0 15px rgba(124, 123, 120, 0.603);
+  box-shadow: var(--box-shade);
   /* background-color: -; */
 }
 .country ul {
@@ -89,8 +107,47 @@ body {
   height: 200px;
   object-fit: cover;
 }
-.backBtn {
-  padding: 0.5rem 1rem;
+.infoPage {
+  display: flex;
+  align-items: center;
+}
+.infoPage .flagImage {
+  width: 650px;
+  height: 500px;
+  margin-right: 6rem;
+}
+.detailedInfo {
+  /* display: flex;
+  align-items: center; */
+}
+.detailedInfo h1 {
+  margin-bottom: 3rem; 
+}
+.infoLists {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.infoLists ul:last-child {
+  margin-left: 6rem;
+}
+.info {
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+.info li {
+  list-style-type: none;
+  line-height: 1.8;
+  font-size: 1.2rem;
+}
+.borderCountryBtn {
+  padding: 0.5rem 1.5rem;
+  margin-right: 0.5rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border:none;
+  box-shadow: var(--box-shade);
+  font-size: 14px;
 }
 
 /* =========================== MEDIA QUERIES ============================ */
@@ -118,6 +175,10 @@ body {
   }
 }
 @media only screen and (max-width: 560px) {
+  .App {
+    width: 90%;
+    padding: 2.5rem 0;
+  }
   .header {
     padding: 1rem;
   }
@@ -133,6 +194,10 @@ body {
   }
 }
 @media only screen and (max-width: 360px) {
+  .App {
+    width: 85%;
+    padding: 2rem 0;
+  }
   .header {
     padding: 1rem 0.5rem;
   }

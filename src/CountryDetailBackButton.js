@@ -1,13 +1,17 @@
 import React from "react";
+import { ArrowLeft } from "react-feather";
 
-const CountryDetailBackButton = ({setIsHomePage}) => {
-const handleClick = () =>{
+const CountryDetailBackButton = ({ setIsHomePage }) => {
+  const handleClick = () => {
     setIsHomePage(true);
-}
+  };
 
   return (
-    <div>
-      <button className='backBtn' onClick={handleClick}>Back</button>
+    <div className="iconBtn">
+      <button className="backBtn" onClick={handleClick}>
+        {" "}
+        <ArrowLeft className="icon" /> Back
+      </button>
     </div>
   );
 };
