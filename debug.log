@@ -3,3 +3,4 @@
 [1013/040916.000:ERROR:exception_snapshot_win.cc(99)] thread ID 17072 not found in process
 [1013/040916.000:ERROR:exception_snapshot_win.cc(99)] thread ID 15968 not found in process
 [1015/141136.583:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1016/003457.039:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\lawal\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\10540060-d833-4bd6-a088-98c4f8f652c7: The system cannot find the path specified. (0x3)

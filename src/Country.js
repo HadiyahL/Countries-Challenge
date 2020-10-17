@@ -9,12 +9,12 @@ const Country = ({ country, setIsHomePage, setCountryName }) => {
   };
 
   return (
-    <div className="country" onClick={handleClick}>
+    <div className="country {darkMode? 'country--darkMode':'country--lightMode'}" onClick={handleClick}>
       <Flag flag={country.flag} />
       <CountryInfo
         name={country.name}
         region={country.region}
-        population={country.population}
+        population={country.population.toLocaleString()}
         capital={country.capital}
       />
     </div>

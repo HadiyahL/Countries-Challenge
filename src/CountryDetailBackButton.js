@@ -7,7 +7,7 @@ const handleClick = () =>{
 
   return (
     <div>
-      <button onClick={handleClick}>Back</button>
+      <button className='backBtn' onClick={handleClick}>Back</button>
     </div>
   );
 };
