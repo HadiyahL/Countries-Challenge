@@ -11,7 +11,7 @@ const BorderCountries = ({ countries, country, setCountryName }) => {
     setCountryName(country);
   };
   return (
-    <div>
+    <div className='borderCountries'>
       <h3>Border Countries:</h3>
       {borderingCountries.map((borderingCountry) => {
         return (
