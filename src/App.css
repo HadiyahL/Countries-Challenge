@@ -85,7 +85,7 @@ body {
   margin: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
-  width: 210px;
+  width: 230px;
   box-shadow: var(--box-shade);
   /* background-color: -; */
 }
@@ -211,9 +211,7 @@ body {
   .header h2 {
     font-size: 15px;
   }
-  .country {
-    width: 290px;
-  }
+
   .toggleText {
     font-size: 12px;
   }
@@ -269,9 +267,7 @@ body {
     padding: 0.5rem;
     font-size: 13px;
   }
-  .country {
-    width: 250px;
-  }
+
   .country li:first-child {
     font-size: 1.3rem;
   }
