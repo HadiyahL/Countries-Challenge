@@ -211,6 +211,9 @@ body {
   .header h2 {
     font-size: 15px;
   }
+  .country {
+    width: 290px;
+  }
   .toggleText {
     font-size: 12px;
   }
@@ -265,6 +268,9 @@ body {
     width: 190px;
     padding: 0.5rem;
     font-size: 13px;
+  }
+  .country {
+    width: 250px;
   }
   .country li:first-child {
     font-size: 1.3rem;
