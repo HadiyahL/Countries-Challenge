@@ -7,9 +7,9 @@ const ToggleDarkModeBtn = ({ darkMode, setDarkMode }) => {
   };
 
   return (
-    <div className='toggleBtn'>
-      <Moon onClick={handleClick} />
-      <span className='toggleText'>Dark Mode</span>
+    <div className="toggleBtn" onClick={handleClick}>
+      <Moon />
+      <span className="toggleText">Dark Mode</span>
     </div>
   );
 };

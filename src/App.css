@@ -85,7 +85,7 @@ body {
   margin: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
-  width: 230px;
+  width: 210px;
   box-shadow: var(--box-shade);
   /* background-color: -; */
 }
@@ -218,6 +218,10 @@ body {
   .searchFilter,
   #regions {
     font-size: 12px;
+  }
+  .country {
+  
+  width: 230px;
   }
   .infoPage .flagImage {
     width: 330px;
